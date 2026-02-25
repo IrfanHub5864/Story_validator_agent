@@ -1,0 +1,7 @@
+{
+    "id": "story-validator-extension-dev",
+    "public": false,
+    "baseUri": "http://localhost:3000",
+    "name": "Story Validator - AI Review (DEV)",
+    "description": "Development version"
+}

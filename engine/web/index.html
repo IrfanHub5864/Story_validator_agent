@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate User Story</title>
+</head>
+<body>
+    <h2>Azure DevOps Work Item Validator</h2>
+    <input type="number" id="workItemId" placeholder="Enter Work Item ID">
+    <button onclick="validateStory()">Validate</button>
+    <p id="status"></p>
+
+    <script>
+        async function validateStory() {
+            const id = document.getElementById("workItemId").value;
+            if (!id) { alert("Enter Work Item ID"); return; }
+
+            document.getElementById("status").innerText = "Validating...";
+
+            try {
+                const response = await fetch("/validate", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({ work_item_id: id })
+                });
+
+                const result = await response.json();
+                document.getElementById("status").innerText = result.message;
+            } catch (err) {
+                document.getElementById("status").innerText = "Error connecting to server";
+                console.error(err);
+            }
+        }
+    </script>
+</body>
+</html>

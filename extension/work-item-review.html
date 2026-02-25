@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story Validator - AI Review</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 16px;
+            background-color: #f8f9fa;
+        }
+        button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 16px;
+            min-height: 200px;
+            overflow-y: auto;
+            font-size: 13px;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+            padding: 40px;
+            font-style: italic;
+        }
+        .success {
+            color: #107c10;
+            background-color: #e6f2e6;
+            padding: 12px;
+            border-radius: 4px;
+        }
+        .error {
+            color: #d13438;
+            background-color: #fde7e9;
+            padding: 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <button id="validateBtn">🤖 Validate with AI Agent</button>
+    <div id="result" class="result">
+        <div class="loading">Ready to validate. Click the button above.</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vss-web-extension-sdk/lib/VSS.SDK.min.js"></script>
+    <script src="work-item-review.js"></script>
+</body>
+</html>

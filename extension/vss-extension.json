@@ -1,0 +1,46 @@
+{
+    "manifestVersion": 1,
+    "id": "story-validator-extension",
+    "version": "1.3.4",
+    "name": "Story Validator - AI Review",
+    "description": "AI-powered user story validation",
+    "publisher": "StoryValidatorOrg",
+    "public": false,
+    "categories": [
+        "Azure Boards"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.work_write"
+    ],
+    "contributions": [
+        {
+            "id": "story-validator-panel",
+            "type": "ms.vss-work-web.work-item-form-page",
+            "description": "AI review panel",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "AI Review",
+                "uri": "work-item-review.html",
+                "height": 600
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "work-item-review.html",
+            "addressable": true
+        },
+        {
+            "path": "work-item-review.js",
+            "addressable": true
+        }
+    ]
+}

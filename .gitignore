@@ -1,0 +1,38 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.venv*/
+*.egg-info/
+*.egg
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs / temp
+*.log
+*.tmp
+
+# Azure / deployment artifacts
+*.azure-pipelines.yml
+.deployment
+.azure/
+
+# Render/Vercel build output
+/.render/
+.vercel/
+
+# Node projects
+extension/node_modules/
+extension/dist/
+extension/output/
+
+# Extension package files
+*.vsix
+
+# Build artifacts
+*.pyc
