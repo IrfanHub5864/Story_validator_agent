@@ -34,5 +34,8 @@ extension/output/
 # Extension package files
 *.vsix
 
+# Environment
+.env
+
 # Build artifacts
 *.pyc
